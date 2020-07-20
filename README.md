@@ -29,3 +29,7 @@ npm start
 
 Runs the app in the development mode.<br />
 Application will be served in [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### Deployment
+
+Deployed App : https://july-posts.herokuapp.com/
