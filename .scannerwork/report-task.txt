@@ -1,0 +1,6 @@
+projectKey=react-truelink-challenge-july
+serverUrl=http://sonar.nineleaps.com
+serverVersion=7.9.3.33349
+dashboardUrl=http://sonar.nineleaps.com/dashboard?id=react-truelink-challenge-july
+ceTaskId=AXNsxjg1PccfW6YJ32J8
+ceTaskUrl=http://sonar.nineleaps.com/api/ce/task?id=AXNsxjg1PccfW6YJ32J8

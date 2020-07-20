@@ -1,17 +1,16 @@
-import React,{Fragment} from "react";
+import React, { Fragment } from "react";
 import { Route, Switch, NavLink } from "react-router-dom";
-import Posts from './Posts'
-import FileNotFound from './Filenotfound'
-import FullPost from './FullPost'
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
+import Posts from "../Components/Posts/Posts";
+import FileNotFound from "../Globals/Filenotfound";
+import FullPost from "../Components/FullPost/FullPost";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 
-
-class AppRouter extends React.Component{
-    render(){
-        return(
-            <Fragment>
-                <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+class AppRouter extends React.Component {
+  render() {
+    return (
+      <Fragment>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
           <Navbar.Brand href="/">Articles</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -22,14 +21,15 @@ class AppRouter extends React.Component{
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-            <Switch>
+        <Switch>
           <Route path="/" exact component={Posts} />
           <Route path="/posts" exact component={Posts} />
           <Route path={"/posts/:id"} exact component={FullPost} />
           <Route component={FileNotFound} />
-        </Switch></Fragment>
-        )
-    }
+        </Switch>
+      </Fragment>
+    );
+  }
 }
 
 export default AppRouter;
