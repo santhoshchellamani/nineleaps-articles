@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
-import Spinner from "react-bootstrap/Spinner";
-import Alert from "react-bootstrap/Alert";
+import Error from "../../Globals/Error";
+import Loading from "../../Globals/Loading";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -45,20 +45,9 @@ class FullPost extends React.Component {
   render() {
     let posts = null;
     if (this.state.loading) {
-      posts = (
-        <div className="text-center">
-          <Spinner animation="border" role="status" className="text-center">
-            <span className="sr-only">Loading...</span>
-          </Spinner>
-          <span>Fetching Data....</span>
-        </div>
-      );
+      posts = <Loading></Loading>;
     } else if (this.state.error !== null) {
-      posts = (
-        <Alert variant="danger" className="text-center">
-          {this.state.error}
-        </Alert>
-      );
+      posts = <Error error={this.state.error}></Error>;
     } else if (
       this.state.post &&
       this.state.loading !== true &&

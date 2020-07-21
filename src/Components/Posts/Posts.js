@@ -26,11 +26,9 @@ class Posts extends React.Component {
     axios
       .get(API_URL)
       .then((res) => {
-        console.log(res);
         this.setState({ posts: res.data, error: null });
       })
       .catch((err) => {
-        console.log(err.message);
         this.setState({ error: err.message });
       })
       .finally(() => {
@@ -39,7 +37,6 @@ class Posts extends React.Component {
   }
 
   handleClick = (postid) => {
-    console.log("Santhosh", postid);
     this.props.history.push("/posts/" + postid);
   };
   render() {
@@ -50,7 +47,7 @@ class Posts extends React.Component {
     if (this.state.loading) {
       posts = <Loading></Loading>;
     } else if (this.state.error !== null) {
-      posts = <Error></Error>;
+      posts = <Error error={this.state.error}></Error>;
     } else {
     }
 
