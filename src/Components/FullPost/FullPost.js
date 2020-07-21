@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
-import Error from "../../Globals/Error";
-import Loading from "../../Globals/Loading";
+import error from "../../Globals/Error";
+import loading from "../../Globals/Loading";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -45,9 +45,9 @@ class FullPost extends React.Component {
   render() {
     let posts = null;
     if (this.state.loading) {
-      posts = <Loading></Loading>;
+      posts = <loading></loading>;
     } else if (this.state.error !== null) {
-      posts = <Error error={this.state.error}></Error>;
+      posts = <error error={this.state.error}></error>;
     } else if (
       this.state.post &&
       this.state.loading !== true &&

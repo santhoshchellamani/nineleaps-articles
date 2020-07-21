@@ -6,10 +6,10 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { API_URL } from "../../Globals/Constants";
-import PostContent from "./PostContent";
-import Error from "../../Globals/Error";
-import Loading from "../../Globals/Loading";
-import PostHeader from "./PostHeader";
+import postcontent from "./PostContent";
+import error from "../../Globals/Error";
+import loading from "../../Globals/Loading";
+import postheader from "./PostHeader";
 
 class Posts extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class Posts extends React.Component {
     this.state = {
       posts: [],
       loading: true,
-      error: null
+      error: null,
     };
   }
 
@@ -45,10 +45,9 @@ class Posts extends React.Component {
     let posts = null;
     let postdata = null;
     if (this.state.loading) {
-      posts = <Loading></Loading>;
+      posts = <loading></loading>;
     } else if (this.state.error !== null) {
-      posts = <Error error={this.state.error}></Error>;
-    } else {
+      posts = <error error={this.state.error}></error>;
     }
 
     if (
@@ -58,7 +57,7 @@ class Posts extends React.Component {
     ) {
       postdata = this.state.posts.map((post) => {
         return (
-          <PostContent
+          <postcontent
             key={post.id}
             rowId={post.id}
             userId={post.userId}
@@ -83,7 +82,7 @@ class Posts extends React.Component {
         <Row className="justify-content-md-center justify-content-lg-center">
           <Col xs sm md="6" lg="12">
             <Table striped bordered hover>
-              <PostHeader></PostHeader>
+              <postheader></postheader>
               <tbody>{postdata}</tbody>
             </Table>
           </Col>

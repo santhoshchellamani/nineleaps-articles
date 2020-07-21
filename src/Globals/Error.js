@@ -1,6 +1,6 @@
 import React from "react";
 import Alert from "react-bootstrap/Alert";
-const Error = (props) => {
+const error = (props) => {
   return (
     <Alert variant="danger" className="text-center">
       {props.error}
@@ -8,4 +8,4 @@ const Error = (props) => {
   );
 };
 
-export default Error;
+export default error;

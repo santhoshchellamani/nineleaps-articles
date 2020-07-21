@@ -1,6 +1,6 @@
 import React from "react";
 
-const PostContent = (props) => {
+const postcontent = (props) => {
   return (
     <tr onClick={props.clicked} style={props.styling}>
       <td>{props.rowId}</td>
@@ -10,4 +10,4 @@ const PostContent = (props) => {
   );
 };
 
-export default PostContent;
+export default postcontent;

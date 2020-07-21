@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Alert from "react-bootstrap/Alert";
 
-const FileNotFound = (props) => {
+const filenotfound = () => {
   return (
     <Container fluid>
       <Row className="justify-content-center">
@@ -18,4 +18,4 @@ const FileNotFound = (props) => {
   );
 };
 
-export default FileNotFound;
+export default filenotfound;

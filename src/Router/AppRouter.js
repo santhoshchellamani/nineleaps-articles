@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Route, Switch, NavLink } from "react-router-dom";
 import Posts from "../Components/Posts/Posts";
-import FileNotFound from "../Globals/Filenotfound";
+import filenotfound from "../Globals/Filenotfound";
 import FullPost from "../Components/FullPost/FullPost";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -25,7 +25,7 @@ class AppRouter extends React.Component {
           <Route path="/" exact component={Posts} />
           <Route path="/posts" exact component={Posts} />
           <Route path={"/posts/:id"} exact component={FullPost} />
-          <Route component={FileNotFound} />
+          <Route component={filenotfound} />
         </Switch>
       </Fragment>
     );

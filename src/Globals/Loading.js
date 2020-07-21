@@ -2,7 +2,7 @@ import React from "react";
 
 import Spinner from "react-bootstrap/Spinner";
 
-const Loading = (props) => {
+const loading = () => {
   return (
     <div className="text-center">
       <Spinner animation="border" role="status" className="text-center">
@@ -13,4 +13,4 @@ const Loading = (props) => {
   );
 };
 
-export default Loading;
+export default loading;

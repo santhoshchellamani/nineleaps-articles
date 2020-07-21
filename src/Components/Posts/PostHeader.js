@@ -1,6 +1,6 @@
 import React from "react";
 
-const PostHeader = () => {
+const postheader = () => {
   return (
     <thead>
       <tr>
@@ -12,4 +12,4 @@ const PostHeader = () => {
   );
 };
 
-export default PostHeader;
+export default postheader;
