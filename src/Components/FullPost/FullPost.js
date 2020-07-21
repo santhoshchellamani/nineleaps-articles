@@ -17,7 +17,7 @@ class FullPost extends React.Component {
       post: [],
       userDetails: [],
       loading: true,
-      error: null,
+      error: null
     };
   }
   componentDidMount() {

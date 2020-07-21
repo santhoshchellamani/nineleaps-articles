@@ -18,7 +18,7 @@ class Posts extends React.Component {
     this.state = {
       posts: [],
       loading: true,
-      error: null,
+      error: null
     };
   }
 
