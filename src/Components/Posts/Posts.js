@@ -61,7 +61,7 @@ class Posts extends React.Component {
           <PostContent
             key={post.id}
             rowId={post.id}
-            userid={post.userId}
+            userId={post.userId}
             title={post.title}
             styling={pointer}
             clicked={() => {
